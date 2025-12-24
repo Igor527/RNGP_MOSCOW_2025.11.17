@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio | Igor Chevela</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <!-- Include header -->
+    <div id="header-container">
+        <!-- Header content will be dynamically loaded -->
+    </div>
+
+    <main class="container" style="max-width: 700px; padding-top: 5rem; padding-bottom: 5rem;">
+        <a href="index.html" class="outline" role="button">← Назад</a>
+        
+        <article>
+            <header>
+                <h1 style="margin:0">Игорь Чевела</h1>
+                <p>Инженер-генпланист / Разработчик инструментов автоматизации</p>
+            </header>
+
+            <h3>Стек и компетенции</h3>
+            <ul>
+                <li><strong>Проектирование:</strong> AutoCAD, Civil 3D, разработка ПЗУ и ПОС.</li>
+                <li><strong>Автоматизация:</strong> Python, JavaScript, расчеты ТЭП.</li>
+                <li><strong>Специализация:</strong> Оптимизация нормативных расчетов и создание вспомогательного инженерного софта.</li>
+            </ul>
+
+            <blockquote>
+                "Моя цель — избавить проектировщиков от рутины с помощью чистого кода и точных алгоритмов."
+            </blockquote>
+
+            <footer>
+                <small> Belgrade, 2025 </small>
+            </footer>
+        </article>
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-container">
+        <!-- Footer content will be dynamically loaded -->
+    </div>
+
+    <script src="shared.js"></script>
+    <script>
+    // Dynamically load header and footer
+    fetch('header.html').then(response => response.text()).then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        if (typeof initializeHeaderFooter === 'function') {
+            initializeHeaderFooter();
+        } else {
+            setTimeout(() => {
+                if (typeof applyTheme === 'function') applyTheme();
+                if (typeof applyLanguage === 'function') applyLanguage();
+            }, 100);
+        }
+    }).catch(err => console.error('Error loading header:', err));
+
+    fetch('footer.html').then(response => response.text()).then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+        if (typeof applyLanguage === 'function') applyLanguage();
+    }).catch(err => console.error('Error loading footer:', err));
+    </script>
+</body>
+</html>

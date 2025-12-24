@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Igor Chevela</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <!-- Include header -->
+    <div id="header-container">
+        <!-- Header content will be dynamically loaded -->
+    </div>
+
+    <main class="container" style="max-width: 750px; padding-top: 5rem; padding-bottom: 5rem;">
+        <article>
+            <header style="text-align: center;">
+                <hgroup>
+                    <h1 data-i18n="welcome_title">Добро пожаловать!</h1>
+                    <p data-i18n="welcome_desc">Это визитная страница, где вы можете найти ссылки на калькуляторы и другие разделы.</p>
+                </hgroup>
+            </header>
+
+            <div style="display: grid; gap: 1rem; margin-top: 2rem;">
+                <a href="interpolation.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;" data-i18n="welcome_calc1">
+                    Калькулятор интерполяции →
+                </a>
+                <a href="parking.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;" data-i18n="welcome_calc2">
+                    Парковочный калькулятор →
+                </a>
+                <a href="#" role="button" class="contrast outline secondary" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none; opacity: 0.6;" data-i18n="welcome_new_section">
+                    Новый раздел (в разработке)
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-container">
+        <!-- Footer content will be dynamically loaded -->
+    </div>
+
+    <script src="shared.js"></script>
+    <script>
+    // Dynamically load header and footer
+    fetch('header.html').then(response => response.text()).then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        if (typeof initializeHeaderFooter === 'function') {
+            initializeHeaderFooter();
+        } else {
+            // Fallback если функция еще не загружена
+            setTimeout(() => {
+                if (typeof applyTheme === 'function') applyTheme();
+                if (typeof applyLanguage === 'function') applyLanguage();
+            }, 100);
+        }
+    }).catch(err => console.error('Error loading header:', err));
+
+    fetch('footer.html').then(response => response.text()).then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+        if (typeof applyLanguage === 'function') applyLanguage();
+    }).catch(err => console.error('Error loading footer:', err));
+    </script>
+</body>
+</html>

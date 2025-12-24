@@ -1,0 +1,172 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --bg: #f3f4f6;
+    --card: #ffffff;
+    --text: #111827;
+    --accent: #3b82f6;
+    --border: #e5e7eb;
+    --sub-text: #6b7280;
+    --transition: 0.25s ease-in-out;
+    --font-primary: 'Roboto', sans-serif;
+    --container-padding: 20px;
+}
+
+/* Тема: Темная */
+[data-theme="dark"] {
+    --bg: #1e1e1e;
+    --card: #2c2c2c;
+    --text: #e0e0e0;
+    --border: #3a3a3a;
+    --sub-text: #a0a0a0;
+    --accent: #3b82f6; /* Рекомендую оставить синий или чуть приглушить */
+}
+
+/* Тема: Светлая */
+[data-theme="light"] {
+    --bg: #f3f4f6;
+    --card: #ffffff;
+    --text: #111827;
+    --border: #e5e7eb;
+    --sub-text: #6b7280;
+}
+
+body { 
+    font-family: var(--font-primary); 
+    background: var(--bg); 
+    color: var(--text);
+    margin: 0;
+    padding: var(--container-padding);
+    /* Отступы под фиксированные элементы */
+    padding-top: calc(var(--container-padding) + 60px); 
+    padding-bottom: calc(var(--container-padding) + 60px); 
+    min-height: 100vh;
+    transition: background var(--transition), color var(--transition);
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+/* Если нужно центрировать только карточку на пустой странице */
+body.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 1000px; /* Увеличил, так как для калькулятора 600px может быть мало */
+    background: var(--card);
+}
+
+/* Ссылки */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* Основные кнопки интерфейса */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* btn-control (Header/Footer) */
+.btn-control {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: all var(--transition);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-control:hover {
+    background: var(--text);
+    color: var(--card);
+}
+
+/* Фиксация Header/Footer */
+#header-container,
+#footer-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+#header-container { top: 0; }
+#footer-container { bottom: 0; }
+
+
+/* Стили для кнопки Яндекса */
+.yandex-card {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border: 1px dashed #bbc1c7;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.yandex-btn {
+    background-color: #ffcc00 !important;
+    color: #000 !important;
+    border: none !important;
+    padding: 8px 16px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.yandex-btn:hover {
+    background-color: #f5c200 !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Фикс селекта для Pico CSS */
+select#districtSelect {
+    appearance: auto !important;
+    -webkit-appearance: menulist !important;
+}

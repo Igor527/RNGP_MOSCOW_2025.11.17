@@ -3,139 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Интерполятор ПЗУ</title>
-    <style>
-        :root { --blue: #2980b9; --bg: #f4f7f6; --text: #2c3e50; --accent: #fab005; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); padding: 15px; color: var(--text); line-height: 1.4; }
-        .container { max-width: 650px; margin: auto; }
-        
-        .calc-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); margin-bottom: 15px; border-top: 4px solid var(--blue); }
-        h2 { margin: 0 0 15px 0; font-size: 18px; color: var(--blue); }
-        
-        .input-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 12px; color: #7f8c8d; text-transform: uppercase; }
-        select, input { width: 100%; padding: 10px; border: 2px solid #dfe6e9; border-radius: 8px; box-sizing: border-box; font-size: 15px; }
-        
-        .result-box { background: #e8f4fd; border-radius: 10px; padding: 15px; text-align: center; border: 1px solid #d1e9f9; }
-        .result-value { font-size: 32px; font-weight: 800; color: var(--blue); }
-
-        .formula-section { background: #fff; padding: 15px; border-radius: 12px; margin-bottom: 15px; border: 1px solid #eee; }
-        .math-display { font-family: "Cambria Math", "Times New Roman", serif; font-size: 17px; text-align: center; padding: 10px; background: #f9f9f9; border-radius: 6px; }
-        .highlight { color: var(--blue); font-weight: bold; border-bottom: 1px solid var(--blue); }
-
-        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; font-size: 13px; }
-        th { background: #f8f9fa; padding: 10px; text-align: center; border-bottom: 2px solid #eee; }
-        td { padding: 10px; text-align: center; border-bottom: 1px solid #f1f1f1; }
-        .active-row { background: #fff9db !important; font-weight: bold; }
-    </style>
+    <title>Интерполятор | Igor Chevela</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
 <body>
-
-<div class="container">
-    <div class="calc-card">
-        <h2>📐 Линейная интерполяция ПЗУ</h2>
-        
-        <div class="input-group">
-            <label>Параметр (СанПиН):</label>
-            <select id="dataType" onchange="calculate()">
-                <option value="pzu_facade">Стоянка — Фасад жилого дома</option>
-                <option value="pzu_children">Стоянка — Детская площадка (ДП)</option>
-            </select>
-        </div>
-
-        <div class="input-group">
-            <label>Количество м/мест (x₁):</label>
-            <input type="number" id="x1" value="35" oninput="calculate()">
-        </div>
-
-        <div class="result-box">
-            <div class="result-label">Минимальное расстояние (f₁), м:</div>
-            <div id="res_f1" class="result-value">0.00</div>
-        </div>
+    <!-- Include header -->
+    <div id="header-container">
+        <!-- Header content will be dynamically loaded -->
     </div>
 
-    <div class="formula-section">
-        <label>Примененная формула:</label>
-        <div class="math-display">
-            f(x₁) = f₀ + (f₂ - f₀) * (x₁ - x₀) / (x₂ - x₀)
-        </div>
-        <div id="formula_live" class="math-display" style="margin-top:10px; color: var(--blue);">
+    <main class="container" style="max-width: 750px; padding-top: 5rem; padding-bottom: 5rem;">
+        <a href="index.html" class="outline secondary" role="button" style="margin-bottom: 2rem;" data-i18n="back">← Назад</a>
+
+        <article>
+            <header>
+                <h3 style="margin:0" data-i18n="t1">Линейная интерполяция</h3>
+                <small>Расчет расстояний по СанПиН</small>
+            </header>
+
+            <form>
+                <fieldset class="grid">
+                    <label>
+                        Параметр
+                        <select id="dataType" onchange="calculate()">
+                            <option value="pzu_facade">Стоянка — Фасад дома</option>
+                            <option value="pzu_children">Стоянка — Детская площадка</option>
+                        </select>
+                    </label>
+                    <label>
+                        Кол-во м/мест (x₁)
+                        <input type="number" id="x1" value="35" oninput="calculate()">
+                    </label>
+                </fieldset>
+            </form>
+
+            <div style="text-align: center; background: var(--pico-block-code-background-color); padding: 1.5rem; border-radius: var(--pico-border-radius);">
+                <small style="text-transform: uppercase; letter-spacing: 1px;">Результат (f₁):</small>
+                <h2 id="res_f1" style="color: var(--pico-primary); margin: 0.5rem 0;">0.00</h2>
+                <small>метров</small>
             </div>
+
+            <footer style="overflow-x: auto;">
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>x₀ (от)</th>
+                            <th>x₂ (до)</th>
+                            <th>f₀ (м)</th>
+                            <th>f₂ (м)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </footer>
+        </article>
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-container">
+        <!-- Footer content will be dynamically loaded -->
     </div>
 
-    <table id="rangeTable">
-        <thead>
-            <tr>
-                <th>x₀ (от)</th>
-                <th>x₂ (до)</th>
-                <th>f₀ (м)</th>
-                <th>f₂ (м)</th>
-            </tr>
-        </thead>
-        <tbody id="tableBody"></tbody>
-    </table>
-</div>
-
-<script>
-const dataTables = {
-    pzu_facade: [
-        {x0: 10, x2: 50,  f0: 10, f2: 15},
-        {x0: 50, x2: 100, f0: 15, f2: 25},
-        {x0: 100,x2: 300, f0: 25, f2: 35}
-    ],
-    pzu_children: [
-        {x0: 10, x2: 50,  f0: 25, f2: 50},
-        {x0: 50, x2: 100, f0: 50, f2: 50},
-        {x0: 100,x2: 300, f0: 50, f2: 50}
-    ]
-};
-
-function calculate() {
-    const type = document.getElementById('dataType').value;
-    const x1 = parseFloat(document.getElementById('x1').value) || 0;
-    const table = dataTables[type];
-    
-    let result = 0;
-    let activeIndex = -1;
-
-    // Поиск диапазона
-    const range = table.find((r, index) => {
-        if (x1 >= r.x0 && x1 <= r.x2) {
-            activeIndex = index;
-            return true;
+    <script src="shared.js"></script>
+    <script>
+    // Dynamically load header and footer
+    fetch('header.html').then(response => response.text()).then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        if (typeof initializeHeaderFooter === 'function') {
+            initializeHeaderFooter();
+        } else {
+            setTimeout(() => {
+                if (typeof applyTheme === 'function') applyTheme();
+                if (typeof applyLanguage === 'function') applyLanguage();
+            }, 100);
         }
-    });
+    }).catch(err => console.error('Error loading header:', err));
 
-    updateTable(table, activeIndex);
+    fetch('footer.html').then(response => response.text()).then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+        if (typeof applyLanguage === 'function') applyLanguage();
+    }).catch(err => console.error('Error loading footer:', err));
+    </script>
+    <script>
+        const dataTables = {
+            pzu_facade: [
+                {x0: 10, x2: 50,  f0: 10, f2: 15},
+                {x0: 50, x2: 100, f0: 15, f2: 25},
+                {x0: 100,x2: 300, f0: 25, f2: 35}
+            ],
+            pzu_children: [
+                {x0: 10, x2: 50,  f0: 25, f2: 50},
+                {x0: 50, x2: 100, f0: 50, f2: 50},
+                {x0: 100,x2: 300, f0: 50, f2: 50}
+            ]
+        };
 
-    if (range) {
-        // КЛАССИЧЕСКАЯ ФОРМУЛА
-        result = range.f0 + (range.f2 - range.f0) * (x1 - range.x0) / (range.x2 - range.x0);
-        
-        // Отображение живых цифр
-        document.getElementById('formula_live').innerHTML = 
-            `${range.f0} + (${range.f2} - ${range.f0}) * (<span class="highlight">${x1}</span> - ${range.x0}) / (${range.x2} - ${range.x0}) = <span class="highlight">${result.toFixed(2)}</span>`;
-    } else {
-        document.getElementById('formula_live').innerText = "Значение вне диапазона";
-        result = x1 < table[0].x0 ? table[0].f0 : table[table.length-1].f2;
-    }
+        function calculate() {
+            const type = document.getElementById('dataType').value;
+            const x1 = parseFloat(document.getElementById('x1').value) || 0;
+            const table = dataTables[type];
+            let result = 0, activeIndex = -1;
 
-    document.getElementById('res_f1').innerText = result.toFixed(2);
-}
+            const range = table.find((r, index) => {
+                if (x1 >= r.x0 && x1 <= r.x2) { activeIndex = index; return true; }
+            });
 
-function updateTable(table, activeIndex) {
-    const tbody = document.getElementById('tableBody');
-    tbody.innerHTML = "";
-    table.forEach((row, index) => {
-        const tr = document.createElement('tr');
-        if (index === activeIndex) tr.className = "active-row";
-        tr.innerHTML = `<td>${row.x0}</td><td>${row.x2}</td><td>${row.f0}</td><td>${row.f2}</td>`;
-        tbody.appendChild(tr);
-    });
-}
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = "";
+            table.forEach((row, index) => {
+                const tr = document.createElement('tr');
+                if (index === activeIndex) tr.style.backgroundColor = "var(--pico-primary-background)";
+                tr.innerHTML = `<td>${row.x0}</td><td>${row.x2}</td><td>${row.f0}</td><td>${row.f2}</td>`;
+                tbody.appendChild(tr);
+            });
 
-calculate();
-</script>
-
+            if (range) {
+                result = range.f0 + (range.f2 - range.f0) * (x1 - range.x0) / (range.x2 - range.x0);
+            } else {
+                result = x1 < table[0].x0 ? table[0].f0 : table[table.length-1].f2;
+            }
+            document.getElementById('res_f1').innerText = result.toFixed(2);
+        }
+        document.addEventListener('DOMContentLoaded', calculate);
+    </script>
 </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igor Chevela</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <!-- Include header -->
+    <div id="header-container">
+        <!-- Header content will be dynamically loaded -->
+    </div>
+
+    <main class="container" style="max-width: 750px; padding-top: 5rem; padding-bottom: 5rem;">
+        <article>
+            <header style="text-align: center;">
+                <hgroup>
+                    <h1 data-i18n="main_title">Игорь Чевела</h1>
+                    <p data-i18n="main_desc">Инженерная автоматизация и расчеты ТЭП</p>
+                </hgroup>
+            </header>
+
+            <div style="display: grid; gap: 1rem; margin-top: 2rem;">
+                <a href="interpolation.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;" data-i18n="t1">
+                    Интерполяция стоянок →
+                </a>
+                <a href="parking.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;" data-i18n="t2">
+                    Расчет машиномест →
+                </a>
+            </div>
+
+            <footer style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+                <a href="bio.html" class="secondary" data-i18n="bio_btn">Обо мне</a>
+                <a href="https://t.me/IGOR_CHEVELA" target="_blank" class="secondary">Telegram</a>
+            </footer>
+        </article>
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-container">
+        <!-- Footer content will be dynamically loaded -->
+    </div>
+
+    <script src="shared.js"></script>
+    <script>
+    // Dynamically load header and footer
+    fetch('header.html').then(response => response.text()).then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        if (typeof initializeHeaderFooter === 'function') {
+            initializeHeaderFooter();
+        } else {
+            setTimeout(() => {
+                if (typeof applyTheme === 'function') applyTheme();
+                if (typeof applyLanguage === 'function') applyLanguage();
+            }, 100);
+        }
+    }).catch(err => console.error('Error loading header:', err));
+
+    fetch('footer.html').then(response => response.text()).then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+        if (typeof applyLanguage === 'function') applyLanguage();
+    }).catch(err => console.error('Error loading footer:', err));
+    </script>
+</body>
+</html>
