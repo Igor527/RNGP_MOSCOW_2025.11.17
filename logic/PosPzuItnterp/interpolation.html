@@ -6,14 +6,10 @@
     <title>Интерполятор | Igor Chevela</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
-<body data-back-url="../../welcome.html">
-    <!-- Include header -->
-    <div id="header-container">
-        <!-- Header content will be dynamically loaded -->
-    </div>
+<body data-back-url="../../index.html">
+    <div id="header-container"></div>
 
     <main class="container" style="max-width: 750px; padding-top: 5rem; padding-bottom: 5rem;">
-
         <article>
             <header>
                 <h3 style="margin:0" data-i18n="t1">Линейная интерполяция</h3>
@@ -58,30 +54,12 @@
         </article>
     </main>
 
-    <!-- Include footer -->
-    <div id="footer-container">
-        <!-- Footer content will be dynamically loaded -->
-    </div>
+    <div id="footer-container"></div>
 
     <script src="../../main/shared.js"></script>
     <script>
-    // Dynamically load header and footer
-    fetch('../../main/header.html').then(response => response.text()).then(data => {
-        document.getElementById('header-container').innerHTML = data;
-        if (typeof initializeHeaderFooter === 'function') {
-            initializeHeaderFooter();
-        } else {
-            setTimeout(() => {
-                if (typeof applyTheme === 'function') applyTheme();
-                if (typeof applyLanguage === 'function') applyLanguage();
-            }, 100);
-        }
-    }).catch(err => console.error('Error loading header:', err));
-
-    fetch('../../main/footer.html').then(response => response.text()).then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-        if (typeof applyLanguage === 'function') applyLanguage();
-    }).catch(err => console.error('Error loading footer:', err));
+    fetch('../../main/header.html').then(r=>r.text()).then(h=>{ document.getElementById('header-container').innerHTML=h; initializeHeaderFooter?.(); }).catch(err=>console.error('Error loading header:',err));
+    fetch('../../main/footer.html').then(r=>r.text()).then(f=>{ document.getElementById('footer-container').innerHTML=f; }).catch(err=>console.error('Error loading footer:',err));
     </script>
     <script>
         const dataTables = {

@@ -2,10 +2,58 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=pubic/index.html">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Igor Chevela</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
 <body>
-    <p>Redirecting to <a href="pubic/index.html">welcome page</a>...</p>
+    <div id="header-container"></div>
+
+    <main class="container" style="max-width: 750px; padding-top: 5rem; padding-bottom: 5rem;">
+        <article>
+            <header style="text-align: center;">
+                <hgroup>
+                    <h1>Добро пожаловать!</h1>
+                    <p>Это страница, где вы можете сделать предварительные технические расчёты.</p>
+                    <p>Проект разрабатывается для себя и отображается «как есть». Ответственность за результаты лежит на пользователе.</p>
+                </hgroup>
+            </header>
+
+            <div style="display: grid; gap: 1rem; margin-top: 2rem;">
+                <a href="logic/PosPzuItnterp/interpolation.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;">
+                    Расчёт интерполяции стоянок
+                </a>
+                <a href="logic/rngp_2025_11_17_v.1/parking.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;">
+                    Расчёты стоянок в Москве по РГНП 2025 
+                </a>
+
+                <a href="#" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none; opacity: 1.0;">
+                    Расчёты благо в Москве 2025
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="main/shared.js"></script>
+    <script>
+    fetch('main/header.html').then(response => response.text()).then(data => {
+        document.getElementById('header-container').innerHTML = data;
+        if (typeof initializeHeaderFooter === 'function') {
+            initializeHeaderFooter();
+        } else {
+            setTimeout(() => {
+                if (typeof applyTheme === 'function') applyTheme();
+                if (typeof applyLanguage === 'function') applyLanguage();
+            }, 100);
+        }
+    }).catch(err => console.error('Error loading header:', err));
+
+    fetch('main/footer.html').then(response => response.text()).then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+        if (typeof applyLanguage === 'function') applyLanguage();
+    }).catch(err => console.error('Error loading footer:', err));
+    </script>
 </body>
 </html>

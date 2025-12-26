@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор машиномест по №945-ПП | Igor Chevela</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="parkingCalculator.js"></script>
+    <style>
+        body { padding-top: 4rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .results { margin-top: 2rem; padding: 1rem; background: var(--pico-card-background-color); border-radius: var(--pico-border-radius); overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.875rem; }
+        table td, table th { border: 1px solid var(--pico-muted-border-color); padding: 0.5rem; text-align: left; }
+        th { background-color: var(--pico-muted-color); font-weight: bold; }
+        .section { margin-bottom: 1rem; }
+        .section h4 { cursor: pointer; user-select: none; color: var(--pico-primary); display: flex; align-items: center; gap: 0.5rem; }
+        .section h4:before { content: '▼'; display: inline-block; transition: transform 0.2s; font-size: 0.875rem; }
+        .section.collapsed h4:before { transform: rotate(-90deg); }
+        .section-content { display: block; margin-top: 1rem; }
+        .section.collapsed .section-content { display: none; }
+        .ui-autocomplete { max-height: 200px; overflow-y: auto; overflow-x: hidden; z-index: 1000; }
+        .initial-values { margin-top: 1.5rem; padding: 1rem; background: var(--pico-code-background-color); border-radius: var(--pico-border-radius); overflow-x: auto; }
+        .initial-values pre { margin: 0; overflow-x: auto; font-size: 0.875rem; }
+        #fullAddressRow { margin-bottom: 1rem; padding: 0.75rem; background: var(--pico-card-background-color); border-radius: var(--pico-border-radius); border-left: 4px solid var(--pico-primary); font-size: 0.875rem; }
+        #fullAddressOutput { font-weight: 600; }
+        #yandexLinkContainer { margin-bottom: 1rem; }
+        .yandex-card { padding: 1rem; background: var(--pico-card-background-color); border: 1px dashed var(--pico-muted-border-color); border-radius: var(--pico-border-radius); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; }
+        .toast { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); background: var(--pico-card-background-color); border: 1px solid var(--pico-muted-border-color); border-radius: var(--pico-border-radius); padding: 0.75rem 1rem; box-shadow: 0 6px 24px rgba(0,0,0,0.15); z-index: 1001; font-weight: 500; }
+        .paste-fallback { margin-top: 1rem; padding: 1rem; background: var(--pico-card-background-color); border: 2px dashed var(--pico-muted-border-color); border-radius: var(--pico-border-radius); display: none; }
+        .paste-fallback.show { display: block; }
+        .bulk-grid { display: grid; grid-template-columns: 1fr 1fr 0.6fr; gap: 1rem; align-items: stretch; height: calc(18 * 2.6rem + 2rem); }
+        .paste-hint { background: var(--pico-code-background-color); padding: 1rem; border-radius: var(--pico-border-radius); border-left: 4px solid var(--pico-primary); display: flex; flex-direction: column; height: 100%; }
+        .paste-hint ol { margin: 0; padding-left: 0; flex: 1; list-style: none; }
+        .paste-hint ol li { min-height: 2.6rem; margin-bottom: 0; display: flex; align-items: center; padding: 0; }
+        #bulkPasteArea { width: 100%; height: 100%; font-family: 'Courier New', monospace; font-size: 0.875rem; line-height: 2.6rem; padding: 0.5rem; border: 1px solid var(--pico-muted-border-color); border-radius: var(--pico-border-radius); resize: none; margin: 0; }
+        .status-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; height: 100%; }
+        .status-list li { min-height: 2.6rem; margin-bottom: 0; padding: 0.5rem; border-radius: var(--pico-border-radius); background: var(--pico-code-background-color); font-size: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+        .status-num { font-weight: 600; }
+    </style>
+</head>
+<body>
+    <main class="container" style="max-width: 900px; padding-top: 2rem; padding-bottom: 3rem;">
+        <article>
+            <header>
+                <h3 style="margin:0">Расчет машиномест по №945-ПП</h3>
+                <small>Москва, редакция на 17 ноября 2025</small>
+            </header>
+            <div id="app"></div>
+        </article>
+    </main>
+    <script>
+        // Placeholder: original file continues with interactive UI.
+    </script>
+</body>
+</html>
