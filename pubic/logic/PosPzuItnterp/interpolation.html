@@ -6,14 +6,13 @@
     <title>Интерполятор | Igor Chevela</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
-<body>
+<body data-back-url="../../welcome.html">
     <!-- Include header -->
     <div id="header-container">
         <!-- Header content will be dynamically loaded -->
     </div>
 
     <main class="container" style="max-width: 750px; padding-top: 5rem; padding-bottom: 5rem;">
-        <a href="welcome.html" class="outline secondary" role="button" style="margin-bottom: 2rem;" data-i18n="back">← Назад</a>
 
         <article>
             <header>
@@ -64,10 +63,10 @@
         <!-- Footer content will be dynamically loaded -->
     </div>
 
-    <script src="shared.js"></script>
+    <script src="../../main/shared.js"></script>
     <script>
     // Dynamically load header and footer
-    fetch('header.html').then(response => response.text()).then(data => {
+    fetch('../../main/header.html').then(response => response.text()).then(data => {
         document.getElementById('header-container').innerHTML = data;
         if (typeof initializeHeaderFooter === 'function') {
             initializeHeaderFooter();
@@ -79,7 +78,7 @@
         }
     }).catch(err => console.error('Error loading header:', err));
 
-    fetch('footer.html').then(response => response.text()).then(data => {
+    fetch('../../main/footer.html').then(response => response.text()).then(data => {
         document.getElementById('footer-container').innerHTML = data;
         if (typeof applyLanguage === 'function') applyLanguage();
     }).catch(err => console.error('Error loading footer:', err));

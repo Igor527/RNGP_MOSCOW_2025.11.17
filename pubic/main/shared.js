@@ -1,52 +1,3 @@
-const translations = {
-    ru: {
-        main_title: "Игорь Чевела",
-        main_desc: "Инженерная автоматизация и расчеты ТЭП",
-        t1: "Интерполяция стоянок",
-        t2: "Расчет машиномест",
-        bio_btn: "Обо мне",
-        back: "← Назад",
-        tg: "Telegram",
-        welcome_title: "Добро пожаловать!",
-        welcome_desc: "Это визитная страница, где вы можете найти ссылки на калькуляторы и другие разделы.",
-        welcome_calc1: "Калькулятор интерполяции",
-        welcome_calc2: "Парковочный калькулятор",
-        welcome_new_section: "Новый раздел (в разработке)"
-    },
-    en: {
-        main_title: "Igor Chevela",
-        main_desc: "Engineering automation & TEP calculations",
-        t1: "Parking Interpolation",
-        t2: "Parking Calculator",
-        bio_btn: "About Me",
-        back: "← Back",
-        tg: "Telegram",
-        welcome_title: "Welcome!",
-        welcome_desc: "This is a landing page where you can find links to calculators and other sections.",
-        welcome_calc1: "Interpolation Calculator",
-        welcome_calc2: "Parking Calculator",
-        welcome_new_section: "New section (coming soon)"
-    }
-};
-
-function applyLanguage() {
-    const lang = localStorage.getItem('lang') || 'ru';
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            el.innerText = translations[lang][key];
-        }
-    });
-    const langBtn = document.getElementById('langBtn');
-    if (langBtn) langBtn.innerText = lang.toUpperCase();
-}
-
-window.toggleLang = function() {
-    const newLang = (localStorage.getItem('lang') || 'ru') === 'ru' ? 'en' : 'ru';
-    localStorage.setItem('lang', newLang);
-    applyLanguage();
-}
-
 function applyTheme() {
     let mode = parseInt(localStorage.getItem('themeMode'));
     
@@ -93,12 +44,44 @@ window.toggleTheme = function() {
 }
 
 function initializeHeaderFooter() {
-    // Инициализация кнопок темы и языка после загрузки header
+    // Инициализация темы после загрузки header
     applyTheme();
-    applyLanguage();
+
+    // Устанавливаем корректную ссылку на Docs из любого раздела
+    const docsLink = document.getElementById('docsLink');
+    if (docsLink) {
+        const path = window.location.pathname.replace(/\\/g, '/');
+        const baseIndex = path.toLowerCase().lastIndexOf('/pubic/');
+        let docsPath = 'docs/';
+        if (baseIndex !== -1) {
+            const base = path.substring(0, baseIndex + 7);
+            docsPath = base + 'docs/';
+        }
+        docsLink.setAttribute('href', docsPath);
+    }
+
+    // Динамическая кнопка Назад по атрибуту страницы
+    const backUrl = document.body?.dataset?.backUrl;
+    const inner = document.getElementById('header-inner') || document.querySelector('header');
+    if (inner) {
+        const existing = document.getElementById('backLinkDynamic');
+        if (existing) existing.remove();
+
+        if (backUrl) {
+            const backLink = document.createElement('a');
+            backLink.id = 'backLinkDynamic';
+            backLink.href = backUrl;
+            backLink.setAttribute('role', 'button');
+            backLink.className = 'outline secondary';
+            backLink.style.marginRight = 'auto';
+            backLink.style.padding = '0.45rem 0.9rem';
+            backLink.style.fontSize = '0.95rem';
+            backLink.innerText = '← Назад';
+            inner.insertBefore(backLink, inner.firstChild);
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     applyTheme();
-    applyLanguage();
 });

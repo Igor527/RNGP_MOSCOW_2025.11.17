@@ -16,21 +16,22 @@
         <article>
             <header style="text-align: center;">
                 <hgroup>
-                    <h1 data-i18n="welcome_title">Добро пожаловать!</h1>
-                    <p data-i18n="welcome_desc">Это визитная страница, где вы можете найти ссылки на калькуляторы и другие разделы.</p>
+                    <h1>Добро пожаловать!</h1>
+                    <p>Это страница, где вы можете сделать предварительные технические расчёты.</p>
+                    <p>Проект разрабатывается для себя и отображается «как есть». Ответственность за результаты лежит на пользователе.</p>
                 </hgroup>
             </header>
 
             <div style="display: grid; gap: 1rem; margin-top: 2rem;">
-                <a href="interpolation.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;" data-i18n="welcome_calc1">
-                    Калькулятор интерполяции 
+                <a href="logic/PosPzuItnterp/interpolation.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;">
+                    Расчёт интерполяции стоянок
                 </a>
-                <a href="mainStoyanki.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;" data-i18n="welcome_calc2">
-                    Расчёты стоянок и благоустройства 
+                <a href="logic/rngp_2025_11_17_v.1/parking.html" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none;">
+                    Расчёты стоянок в Москве по РГНП 2025 
                 </a>
 
-                <a href="#" role="button" class="contrast outline secondary" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none; opacity: 0.6;" data-i18n="welcome_new_section">
-                    Новый раздел (в разработке)
+                <a href="#" role="button" class="contrast outline" style="width: 100%; padding: 1rem; text-align: center; text-decoration: none; opacity: 1.0;">
+                    Расчёты благо в Москве 2025
                 </a>
             </div>
         </article>
@@ -41,10 +42,10 @@
         <!-- Footer content will be dynamically loaded -->
     </div>
 
-    <script src="shared.js"></script>
+    <script src="main/shared.js"></script>
     <script>
     // Dynamically load header and footer
-    fetch('header.html').then(response => response.text()).then(data => {
+    fetch('main/header.html').then(response => response.text()).then(data => {
         document.getElementById('header-container').innerHTML = data;
         if (typeof initializeHeaderFooter === 'function') {
             initializeHeaderFooter();
@@ -57,7 +58,7 @@
         }
     }).catch(err => console.error('Error loading header:', err));
 
-    fetch('footer.html').then(response => response.text()).then(data => {
+    fetch('main/footer.html').then(response => response.text()).then(data => {
         document.getElementById('footer-container').innerHTML = data;
         if (typeof applyLanguage === 'function') applyLanguage();
     }).catch(err => console.error('Error loading footer:', err));
