@@ -7,138 +7,7 @@ const parkingData = {
         ],
     },
     districts: {
-        "Академический": [0.7, 0.7],
-        "Алексеевский": [0.5, 0.5],
-        "Алтуфьевский": [0.9, 0.9],
-        "Арбат": [0.2, 0.2],
-        "Аэропорт": [0.5, 0.5],
-        "Бабушкинский": [0.9, 0.9],
-        "Басманный": [0.2, 0.5],
-        "Беговой": [0.2, 0.5],
-        "Бекасово": [0.9, 0.9],
-        "Бескудниковский": [0.9, 0.9],
-        "Бибирево": [0.9, 0.9],
-        "Бирюлёво Восточное": [0.9, 0.9],
-        "Бирюлёво Западное": [0.9, 0.9],
-        "Богородское": [0.9, 0.9],
-        "Братеево": [0.9, 0.9],
-        "Бутово Северное": [0.9, 0.9],
-        "Бутово Южное": [0.9, 0.9],
-        "Бутырский": [0.5, 0.5],
-        "Вешняки": [0.9, 0.9],
-        "Внуково": [0.7, 0.7],
-        "Войковский": [0.5, 0.5],
-        "Вороново": [0.9, 0.9],
-        "Восточное Дегунино": [0.9, 0.9],
-        "Восточное Измайлово": [0.9, 0.9],
-        "Восточный": [0.9, 0.9],
-        "Выхино-Жулебино": [0.9, 0.9],
-        "Гагаринский": [0.5, 0.5],
-        "Головинский": [0.7, 0.7],
-        "Гольяново": [0.9, 0.9],
-        "Даниловский": [0.2, 0.5],
-        "Дмитровский": [0.9, 0.9],
-        "Донской": [0.2, 0.5],
-        "Дорогомилово": [0.2, 0.5],
-        "Замоскворечье": [0.2, 0.2],
-        "Западное Дегунино": [0.9, 0.9],
-        "Зюзино": [0.9, 0.9],
-        "Зябликово": [0.9, 0.9],
-        "Ивановское": [0.9, 0.9],
-        "Измайлово": [0.9, 0.9],
-        "Капотня": [0.9, 0.9],
-        "Коммунарка": [0.7, 0.7],
-        "Коньково": [0.7, 0.7],
-        "Коптево": [0.9, 0.9],
-        "Косино-Ухтомский": [0.9, 0.9],
-        "Котловка": [0.9, 0.9],
-        "Краснопахорский": [0.9, 0.9],
-        "Красносельский": [0.2, 0.5],
-        "Крылатское": [0.7, 0.7],
-        "Крюково": [0.9, 0.9],
-        "Кузьминки": [0.9, 0.9],
-        "Кунцево": [0.7, 0.7],
-        "Куркино": [0.9, 0.9],
-        "Левобережный": [0.9, 0.9],
-        "Лефортово": [0.2, 0.5],
-        "Лианозово": [0.9, 0.9],
-        "Ломоносовский": [0.9, 0.9],
-        "Лосиноостровский": [0.9, 0.9],
-        "Люблино": [0.9, 0.9],
-        "Марфино": [0.9, 0.9],
-        "Марьина Роща": [0.2, 0.5],
-        "Марьино": [0.9, 0.9],
-        "Матушкино": [0.7, 0.7],
-        "Метрогородок": [0.7, 0.7],
-        "Мещанский": [0.2, 0.5],
-        "Митино": [0.9, 0.9],
-        "Можайский": [0.7, 0.7],
-        "Молжаниновский": [0.9, 0.9],
-        "Москворечье-Сабурово": [0.7, 0.7],
-        "Нагатино-Садовники": [0.5, 0.5],
-        "Нагатинский Затон": [0.9, 0.9],
-        "Нагорный": [0.7, 0.7],
-        "Некрасовка": [0.9, 0.9],
-        "Нижегородский": [0.7, 0.7],
-        "Новогиреево": [0.9, 0.9],
-        "Новокосино": [0.9, 0.9],
-        "Ново-Переделкино": [0.9, 0.9],
-        "Обручевский": [0.7, 0.7],
-        "Орехово-Борисово Северное": [0.9, 0.9],
-        "Орехово-Борисово Южное": [0.9, 0.9],
-        "Останкинский": [0.5, 0.5],
-        "Отрадное": [0.9, 0.9],
-        "Очаково-Матвеевское": [0.7, 0.7],
-        "Перово": [0.7, 0.7],
-        "Печатники": [0.7, 0.7],
-        "Покровское-Стрешнево": [0.7, 0.7],
-        "Преображенское": [0.5, 0.5],
-        "Пресненский": [0.2, 0.5],
-        "Проспект Вернадского": [0.7, 0.7],
-        "Раменки": [0.7, 0.7],
-        "Ростокино": [0.7, 0.7],
-        "Рязанский": [0.9, 0.9],
-        "Савёлки": [0.9, 0.9],
-        "Савёловский": [0.5, 0.5],
-        "Свиблово": [0.7, 0.7],
-        "Северное Измайлово": [0.9, 0.9],
-        "Северное Медведково": [0.9, 0.9],
-        "Северное Тушино": [0.9, 0.9],
-        "Северный": [0.9, 0.9],
-        "Силино": [0.7, 0.7],
-        "Сокол": [0.5, 0.5],
-        "Соколиная Гора": [0.5, 0.5],
-        "Сокольники": [0.5, 0.5],
-        "Солнцево": [0.9, 0.9],
-        "Старое Крюково": [0.7, 0.7],
         "Строгино": [0.9, 0.9],
-        "Таганский": [0.2, 0.2],
-        "Тверской": [0.2, 0.2],
-        "Текстильщики": [0.9, 0.9],
-        "Тёплый Стан": [0.9, 0.9],
-        "Тимирязевский": [0.7, 0.7],
-        "Троицк": [0.7, 0.7],
-        "Тропарёво-Никулино": [0.7, 0.7],
-        "Филёвский Парк": [0.7, 0.7],
-        "Фили-Давыдково": [0.9, 0.9],
-        "Филимонковский": [0.9, 0.9],
-        "Хамовники": [0.2, 0.5],
-        "Ховрино": [0.9, 0.9],
-        "Хорошёво-Мневники": [0.9, 0.9],
-        "Хорошёвский": [0.5, 0.5],
-        "Царицыно": [0.9, 0.9],
-        "Черемушки": [0.7, 0.7],
-        "Чертаново Северное": [0.9, 0.9],
-        "Чертаново Центральное": [0.9, 0.9],
-        "Чертаново Южное": [0.9, 0.9],
-        "Щербинка": [0.7, 0.7],
-        "Щукино": [0.7, 0.7],
-        "Южное Медведково": [0.9, 0.9],
-        "Южное Тушино": [0.9, 0.9],
-        "Южнопортовый": [0.7, 0.7],
-        "Якиманка": [0.2, 0.2],
-        "Ярославский": [0.9, 0.9],
-        "Ясенево": [0.9, 0.9]
     },
     mo_rates: {
         "living": { label: "Жилое назначение", s1: 22100, unit: "кв.м" },
@@ -214,10 +83,7 @@ class ParkingCalculator {
 
     calculateNk() {
         this.results.Nk_residential = this.input.areaFlats ? Math.ceil(this.input.areaFlats / parkingData.mo_rates.living.s1) : 0;
-        this.results.Nk_commercial = 0;
-        if (this.input.areaNNP && this.input.areaNNP >= 450) {
-            this.results.Nk_commercial = Math.min(4, Math.ceil(this.input.areaNNP / parkingData.mo_rates.commercial.s1));
-        }
+        this.results.Nk_commercial = this.input.areaNNP ? Math.min(4, Math.ceil(this.input.areaNNP / parkingData.mo_rates.commercial.s1)) : 0;
         this.results.Nk_school = this.input.schoolCapacity ? Math.ceil(this.input.schoolCapacity / parkingData.mo_rates.school.s1) : 0;
         this.results.Nk_preschool = this.input.kindergartenCapacity ? Math.ceil(this.input.kindergartenCapacity / parkingData.mo_rates.kindergarten.s1) : 0;
         this.results.No_total = this.results.Nk_residential + this.results.Nk_commercial;
@@ -260,35 +126,32 @@ class ParkingCalculator {
             this.results.Np +
             this.results.Ng +
             this.results.Nv +
-            this.results.No_total -
-            F_actual
+            this.results.No_total
         );
 
         this.results.N_min = Math.max(0, (
             this.results.Np_minus_10 +
             this.results.Ng_minus_10 +
             this.results.Nv_minus_30 +
-            this.results.No_total -
-            F_actual
+            this.results.No_total
         ));
 
         this.results.N_max = (
             this.results.Np_plus_10 +
             this.results.Ng_plus_10 +
             this.results.Nv_plus_30 +
-            this.results.No_total -
-            F_actual
+            this.results.No_total
         );
 
         const ev_share = this.getEVShare(this.input.rnsYear);
-        this.results.N_ev_required = Math.ceil(this.results.Np * ev_share) + 
-                                     Math.ceil(this.results.Ng * ev_share) + 
+        this.results.N_ev_required = Math.ceil(this.results.Np * ev_share) +
+                                     Math.ceil(this.results.Ng * ev_share) +
                                      Math.ceil(this.results.Nv * ev_share);
-        this.results.N_ev_min = Math.ceil(this.results.Np_minus_10 * ev_share) + 
-                                Math.ceil(this.results.Ng_minus_10 * ev_share) + 
+        this.results.N_ev_min = Math.ceil(this.results.Np_minus_10 * ev_share) +
+                                Math.ceil(this.results.Ng_minus_10 * ev_share) +
                                 Math.ceil(this.results.Nv_minus_30 * ev_share);
-        this.results.N_ev_max = Math.ceil(this.results.Np_plus_10 * ev_share) + 
-                                Math.ceil(this.results.Ng_plus_10 * ev_share) + 
+        this.results.N_ev_max = Math.ceil(this.results.Np_plus_10 * ev_share) +
+                                Math.ceil(this.results.Ng_plus_10 * ev_share) +
                                 Math.ceil(this.results.Nv_plus_30 * ev_share);
     }
 
@@ -321,12 +184,12 @@ class ParkingCalculator {
         const N_required = this.results.N_required || 0;
         const N_min = this.results.N_min || 0;
         const N_max = this.results.N_max || 0;
-        
+
         this.results.parking_area_required = Math.ceil(N_required * sqmPerPlace);
         this.results.parking_area_min = Math.ceil(N_min * sqmPerPlace);
         this.results.parking_area_max = Math.ceil(N_max * sqmPerPlace);
         this.results.parking_area_2level = Math.ceil(this.results.parking_area_required / 2);
-        
+
         return this.results.parking_area_required;
     }
 
@@ -356,6 +219,17 @@ class ParkingCalculator {
         const ev_share = this.getEVShare(this.input.rnsYear);
         const sqmPerPlace = this.input.sqmPerPlace || 32;
 
+        const F_actual = (
+            (this.input.fact_zu_mo || 0) +
+            (this.input.fact_zu_guest_mgn || 0) +
+            (this.input.fact_zu_priob_mgn || 0) +
+            (this.input.fact_uds_mo || 0) +
+            (this.input.fact_uds_guest || 0) +
+            (this.input.fact_uds_guest_mgn || 0) +
+            (this.input.fact_uds_priob || 0) +
+            (this.input.fact_uds_priob_mgn || 0)
+        );
+
         let report = `
             <h3>Расчёт стоянок по №945-ПП от 23.12.2015 с изменениями на 17 ноября 2025 года</h3>
             <table border="1" cellpadding="8">
@@ -363,16 +237,14 @@ class ParkingCalculator {
                 <tr><td>Тип объекта</td><td>-</td><td>Многоквартирный дом (2.1.1, 2.5, 2.6)</td></tr>
                 <tr><td>Год РНС</td><td>г.</td><td>${this.input.rnsYear}</td></tr>
                 ${this.input.plotArea ? `<tr><td>Площадь участка проектирования</td><td>кв.м</td><td>${this.input.plotArea}</td></tr>` : ''}
-                ${this.input.sppResidential ? `<tr><td>Суммарная поэтажная жилой части, кв.м (СПП жилой части)</td><td>S</td><td>${this.input.sppResidential}</td></tr>` : ''}
-                ${this.input.areaFlats ? `<tr><td>Площадь квартир, кв.м</td><td>Sоб.кв.</td><td>${this.input.areaFlats}</td></tr>` : ''}
-                ${this.input.sppPublic ? `<tr><td>Суммарная поэтажная площадь помещений общественного назначения, кв.м (СПП НПКИ)</td><td>X</td><td>${this.input.sppPublic}</td></tr>` : ''}
-                ${this.input.areaNPKI ? `<tr><td>Общая площадь помещений общественного назначения (НПКИ), кв.м</td><td>Sнпки</td><td>${this.input.areaNPKI}</td></tr>` : ''}
+                ${this.input.areaFlats ? `<tr><td>Площадь квартир</td><td>Sоб.кв.</td><td>${this.input.areaFlats}</td></tr>` : ''}
+                ${this.input.areaNPKI ? `<tr><td>Общая площадь помещений общественного назначения (НПКИ)</td><td>Sнпки</td><td>${this.input.areaNPKI}</td></tr>` : ''}
                 ${this.input.areaNNP ? `<tr><td>Нежилая наземная площадь (ННП)</td><td>X</td><td>${this.input.areaNNP}</td></tr>` : ''}
                 <tr><td>Район города Москвы</td><td>-</td><td>${this.input.districtName || 'Не указан'}</td></tr>
                 <tr><td>Место площадки относительно ТТК г.Москва</td><td>-</td><td>${this.input.ttkStatus === 'inside' ? 'Внутри ТТК' : 'Снаружи ТТК'}</td></tr>
                 <tr><td>Доступность рельсового каркаса</td><td>-</td><td>${this.input.metroDistance} м (${k1Label})</td></tr>
-                <tr><td>Коэффициент пешей доступности рельсового каркаса по табл. Приложения 5</td><td>К1</td><td>${k1}</td></tr>
-                <tr><td>Уточняющий коэффициент деловой активности территории города Москвы для расчета числа мест приобъектной парковки по табл. Приложения 6</td><td>К2</td><td>${k2}</td></tr>
+                <tr><td>Коэффициент пешей доступности рельсового каркаса по табл. Приложения 5</td><td>K1</td><td>${k1}</td></tr>
+                <tr><td>Уточняющий коэффициент деловой активности территории города Москвы для расчета числа мест приобъектной парковки по табл. Приложения 6</td><td>K2</td><td>${k2}</td></tr>
             </table>`;
 
         if (this.input.areaFlats && this.input.areaFlats > 0) {
@@ -385,14 +257,18 @@ class ParkingCalculator {
                 <tr><td>Nп = (S/S1) × A × К1 = (${this.input.areaFlats} / 33) x 0,257 x ${k1}</td><td>Nп</td><td>${this.results.Np} (шт.)</td></tr>
                 <tr><td>Nп-10% = Nп х 90% = ${this.results.Np} х 90%</td><td>-</td><td>${this.results.Np_minus_10} (шт.)</td></tr>
                 <tr><td>Nп+10% = Nп х 110% = ${this.results.Np} х 110%</td><td>-</td><td>${this.results.Np_plus_10} (шт.)</td></tr>
-            </table>
+            </table>`;
+        }
 
+        if (this.input.areaFlats && this.input.areaFlats > 0) {
+            report += `
             <h4>Расчет числа мест гостевой парковки (допустимо отклонение 10%)</h4>
             <table border="1" cellpadding="8">
                 <tr><th>Наименование показателя</th><th>Обозначение</th><th>Значение</th></tr>
                 <tr><td>Nг = Nп х 10% = ${this.results.Np} х 10%</td><td>Nг</td><td>${this.results.Ng} (шт.)</td></tr>
                 <tr><td>Nг-10% = Nг х 90% = ${this.results.Ng} х 90%</td><td>-</td><td>${this.results.Ng_minus_10} (шт.)</td></tr>
                 <tr><td>Nг+10% = Nг х 110% = ${this.results.Ng} х 110%</td><td>-</td><td>${this.results.Ng_plus_10} (шт.)</td></tr>
+                <tr><td>Из них для МГН: Nг(МГН) = Nг х 10% = ${this.results.Ng} х 10%</td><td>-</td><td>${Math.ceil(this.results.Ng * 0.1)} (шт.), в т.ч. увеличенных размеров: ${Math.ceil(Math.ceil(this.results.Ng * 0.1) * 0.6)} (шт.)</td></tr>
             </table>`;
         }
 
@@ -405,6 +281,7 @@ class ParkingCalculator {
                 <tr><td>Nв = X / Х2 x K1 x K2 = (${this.input.areaNNP} / 90) x ${k1} x ${k2}</td><td>Nв</td><td>${this.results.Nv} (шт.)</td></tr>
                 <tr><td>Nв-30% = Nв х 70% = ${this.results.Nv} х 70%</td><td>-</td><td>${this.results.Nv_minus_30} (шт.)</td></tr>
                 <tr><td>Nв+30% = Nв х 130% = ${this.results.Nv} х 130%</td><td>-</td><td>${this.results.Nv_plus_30} (шт.)</td></tr>
+                <tr><td>Из них для МГН: Nв(МГН) = Nв х 10% = ${this.results.Nv} х 10%</td><td>-</td><td>${Math.ceil(this.results.Nv * 0.1)} (шт.), в т.ч. увеличенных размеров: ${Math.ceil(Math.ceil(this.results.Nv * 0.1) * 0.6)} (шт.)</td></tr>
             </table>`;
         }
 
@@ -433,168 +310,110 @@ class ParkingCalculator {
             </table>`;
         }
 
-        if ((this.input.schoolCapacity && this.input.schoolCapacity > 0) || (this.input.kindergartenCapacity && this.input.kindergartenCapacity > 0)) {
+        if (F_actual > 0) {
             report += `
-            <h4>Расчет числа мест остановки для школы и детского сада:</h4>
+            <h4>Фактическое расположение на участке и УДС м/м, в т.ч.:</h4>
             <table border="1" cellpadding="8">
-                <tr><th>Функциональное назначение объекта</th><th>Расчетный показатель (кол-во учащихся)</th><th>Показатель S1 (чел.)</th><th>Количество мест</th></tr>
-                ${this.input.schoolCapacity && this.input.schoolCapacity > 0 ? `<tr><td>Общеобразовательные организации</td><td>${this.input.schoolCapacity}</td><td>300</td><td>${this.results.Nk_school} (шт.)</td></tr>` : ''}
-                ${this.input.kindergartenCapacity && this.input.kindergartenCapacity > 0 ? `<tr><td>Дошкольные образовательные организации</td><td>${this.input.kindergartenCapacity}</td><td>30</td><td>${this.results.Nk_preschool} (шт.)</td></tr>` : ''}
+                <tr><th>Наименование</th><th>Обозначение</th><th>Количество, шт.</th></tr>
+                <tr><td>На территории земельного участка - места остановки</td><td>Fз(о)</td><td>${this.input.fact_zu_mo || 0}</td></tr>
+                <tr><td>На территории земельного участка - гостевые МГН</td><td>Fз(г,мгн)</td><td>${this.input.fact_zu_guest_mgn || 0}</td></tr>
+                <tr><td>На территории земельного участка - приобъектные МГН</td><td>Fз(в,мгн)</td><td>${this.input.fact_zu_priob_mgn || 0}</td></tr>
+                <tr><td>На территории УДС с прилегающей к участку стороне - места остановок</td><td>Fу(о)</td><td>${this.input.fact_uds_mo || 0}</td></tr>
+                <tr><td>На территории УДС с прилегающей к участку стороне - гостевые (без учёта МГН)</td><td>Fу(г)</td><td>${this.input.fact_uds_guest || 0}</td></tr>
+                <tr><td>На территории УДС с прилегающей к участку стороне - гостевые МГН</td><td>Fу(г,мгн)</td><td>${this.input.fact_uds_guest_mgn || 0}</td></tr>
+                <tr><td>На территории УДС с прилегающей к участку стороне - приобъектные (без учёта МГН)</td><td>Fу(в)</td><td>${this.input.fact_uds_priob || 0}</td></tr>
+                <tr><td>На территории УДС с прилегающей к участку стороне - приобъектные МГН</td><td>Fу(в,мгн)</td><td>${this.input.fact_uds_priob_mgn || 0}</td></tr>
+                <tr><td><strong>Всего фактически размещено (F)</strong></td><td></td><td><strong>${F_actual}</strong></td></tr>
             </table>`;
         }
 
-        return report;
-    }
-}
-
-if (typeof window !== 'undefined') {
-    window.ParkingCalculator = ParkingCalculator;
-    window.parkingData = parkingData;
-}
-        const F_actual = (
-            (this.input.fact_zu_mo || 0) +
-            (this.input.fact_zu_guest_mgn || 0) +
-            (this.input.fact_zu_priob_mgn || 0) +
-            (this.input.fact_uds_mo || 0) +
-            (this.input.fact_uds_guest || 0) +
-            (this.input.fact_uds_guest_mgn || 0) +
-            (this.input.fact_uds_priob || 0) +
-            (this.input.fact_uds_priob_mgn || 0)
-        );
-
-        if (F_actual > 0 || this.results.N_required > 0) {
-            report += `
-            <h4>Требуется разместить в подземной / многоуровневой / огороженной стоянке (с учётом фактически размещённых F=${F_actual} шт.)</h4>
-            <table border="1" cellpadding="8">
-                <tr><th>Вариант</th><th>Обозначение</th><th>Всего, шт.</th><th>Из них ЭМ, шт.</th></tr>
-                <tr><td>Основной расчёт</td><td>N</td><td>${this.results.N_required}</td><td>${Math.ceil((this.results.Np || 0) * ev_share)}</td></tr>
-                <tr><td>Допустимое отклонение в меньшую сторону</td><td>N (мин.)</td><td>${this.results.N_min}</td><td>${this.results.N_ev_min}</td></tr>
-                <tr><td>Допустимое отклонение в большую сторону</td><td>N (макс.)</td><td>${this.results.N_max}</td><td>${this.results.N_ev_max}</td></tr>
-            </table>`;
-        }
-
-        // 8. Таблица "Основной расчёт" - детализация по категориям
         if (this.results.N_required > 0 || F_actual > 0) {
             const Np_total = (this.results.Np || 0);
             const Np_em = Math.ceil(Np_total * ev_share);
             const Np_regular = Np_total - Np_em;
             const Ng_total = (this.results.Ng || 0);
-            const Ng_em = Math.ceil(Ng_total * ev_share);
-            const Ng_regular = Ng_total - Ng_em;
             const Ng_mgn = this.calculateMGNPlaces(Ng_total);
+            const Ng_regular = Ng_total - Ng_mgn.total;
+            const Ng_em = Math.ceil(Ng_regular * ev_share);
             const Nv_total = (this.results.Nv || 0);
-            const Nv_em = Math.ceil(Nv_total * ev_share);
-            const Nv_regular = Nv_total - Nv_em;
             const Nv_mgn = this.calculateMGNPlaces(Nv_total);
+            const Nv_regular = Nv_total - Nv_mgn.total;
+            const Nv_em = Math.ceil(Nv_regular * ev_share);
 
             report += `
-            <h4>8. Основной расчёт: N = Nп + Nг + Nв + Nо - F</h4>
+            <h4>8. Требуется разместить в подземной автостоянке: N = Nп + Nг + Nв - Nо - F</h4>
             <table border="1" cellpadding="8">
-                <tr><th>Позиция</th><th>Описание</th><th>До учета фактически размещенных на участке или УДС - F, шт.</th><th>С учетом F, шт.</th></tr>
-                <tr><td>П1</td><td>Постоянные (без учета электромобилей) — не далее 1200 м</td><td>${Np_regular}</td><td>${Math.max(0, Np_regular - (F_actual ? Math.floor(F_actual * (Np_regular / Np_total)) : 0))}</td></tr>
-                <tr><td>П2</td><td>Постоянные (электромобилей) — не далее 1200 м</td><td>${Np_em}</td><td>${Np_em}</td></tr>
-                <tr><td>Г1</td><td>Гостевые (без учета МГН и электромобилей) — не далее 200 м</td><td>${Ng_regular}</td><td>${Math.max(0, Ng_regular - (F_actual ? Math.floor(F_actual * 0.15) : 0))}</td></tr>
-                <tr><td>Г2</td><td>Гостевые (электромобилей) — не далее 200 м</td><td>${Ng_em}</td><td>${Ng_em}</td></tr>
-                <tr><td>Г3</td><td>Гостевые (МГН) — не далее 100 м по СП59</td><td>${Ng_mgn.total}</td><td>${Math.max(0, Ng_mgn.total - (F_actual ? Math.floor(F_actual * 0.1) : 0))}</td></tr>
-                <tr><td>В1</td><td>Приобъектные (без учета МГН и электромобилей) — не далее 200 м</td><td>${Nv_regular}</td><td>${Math.max(0, Nv_regular - (F_actual ? Math.floor(F_actual * 0.2) : 0))}</td></tr>
-                <tr><td>В2</td><td>Приобъектные (электромобилей) — не далее 200 м</td><td>${Nv_em}</td><td>${Nv_em}</td></tr>
-                <tr><td>В3</td><td>Приобъектные (МГН) — не далее 50 м по СП59</td><td>${Nv_mgn.total}</td><td>${Math.max(0, Nv_mgn.total - (F_actual ? Math.floor(F_actual * 0.05) : 0))}</td></tr>
-                <tr><td>МО</td><td>Места остановок — не далее 150 м</td><td>${this.results.No_total}</td><td>${Math.max(0, this.results.No_total - (F_actual ? Math.floor(F_actual * 0.15) : 0))}</td></tr>
-                <tr><td colspan="2">Итого (без учета F)</td><td>${(Np_total + Ng_total + Nv_total + this.results.No_total)}</td><td>${(Np_total + Ng_total + Nv_total + this.results.No_total - Math.floor(F_actual * 0.6))}</td></tr>
-                <tr><td colspan="2">Требуется с учетом F=${F_actual}</td><td></td><td><strong>${this.results.N_required}</strong></td></tr>
+                <tr><th>Позиция</th><th>Описание</th><th>Количество, шт.</th></tr>
+                <tr><td>П1</td><td>Постоянные (без учёта электромобилей) - не далее 1200м</td><td>${Math.max(0, Np_regular )}</td></tr>
+                <tr><td>П2</td><td>Постоянные (электромобили) - не далее 1200м</td><td>${Np_em}</td></tr>
+                <tr><td>Г1</td><td>Гостевые (без учёта МГН и электромобилей) - в подземной - не далее 200м</td><td>${Math.max(0, Ng_regular - (this.input.fact_uds_guest || 0))}</td></tr>
+                <tr><td>Г2</td><td>Гостевые (электромобили) - в подземной - не далее 200м</td><td>${Ng_em}</td></tr>
+                <tr><td>Г3</td><td>Гостевые (МГН) - в подземной - не далее 100м по СП59</td><td>${Math.max(0, Ng_mgn.total - (this.input.fact_uds_guest_mgn || 0) - (this.input.fact_zu_guest_mgn || 0))}</td></tr>
+                <tr><td>В1</td><td>Приобъектные (без учёта МГН и электромобилей) - в подземной - не далее 200м</td><td>${Math.max(0, Nv_regular - (this.input.fact_uds_priob || 0))}</td></tr>
+                <tr><td>В2</td><td>Приобъектные (электромобили) - в подземной - не далее 200м</td><td>${Nv_em}</td></tr>
+                <tr><td>В3</td><td>Приобъектные (МГН) - в подземной - не далее 50м по СП59</td><td>${Math.max(0, Nv_mgn.total - (this.input.fact_uds_priob_mgn || 0) - (this.input.fact_zu_priob_mgn || 0))}</td></tr>
+                <tr><td>МО</td><td>Места остановок - в подземной - не далее 150м</td><td>${Math.max(0, this.results.No_total - (this.input.fact_uds_mo || 0) - (this.input.fact_zu_mo || 0))}</td></tr>
+                <tr><td><strong>Итого запроектировано</strong></td><td></td><td><strong>${this.results.N_required - F_actual}</strong></td></tr>
             </table>`;
         }
 
-        // 9. Таблица "Допустимое отклонение в меньшую сторону"
         if (this.results.N_min > 0 || F_actual > 0) {
             const Np_minus = (this.results.Np_minus_10 || 0);
             const Np_minus_em = Math.ceil(Np_minus * ev_share);
             const Np_minus_regular = Np_minus - Np_minus_em;
             const Ng_minus = (this.results.Ng_minus_10 || 0);
-            const Ng_minus_em = Math.ceil(Ng_minus * ev_share);
-            const Ng_minus_regular = Ng_minus - Ng_minus_em;
             const Ng_minus_mgn = this.calculateMGNPlaces(Ng_minus);
+            const Ng_minus_regular = Ng_minus - Ng_minus_mgn.total;
+            const Ng_minus_em = Math.ceil(Ng_minus_regular * ev_share);
             const Nv_minus = (this.results.Nv_minus_30 || 0);
-            const Nv_minus_em = Math.ceil(Nv_minus * ev_share);
-            const Nv_minus_regular = Nv_minus - Nv_minus_em;
             const Nv_minus_mgn = this.calculateMGNPlaces(Nv_minus);
+            const Nv_minus_regular = Nv_minus - Nv_minus_mgn.total;
+            const Nv_minus_em = Math.ceil(Nv_minus_regular * ev_share);
 
             report += `
-            <h4>9. Допустимое отклонение в меньшую сторону: N = (Nп-10%) + (Nг-10%) + (Nв-30%) + Nо - F</h4>
+            <h4>9. Допустимо разместить в подземной автостоянке с учётом допустимого отклонения в меньшую сторону: N = (Nп-10%) + (Nг-10%) + (Nв-30%) + Nо - F</h4>
             <table border="1" cellpadding="8">
-                <tr><th>Позиция</th><th>Описание</th><th>До учета фактически размещенных на участке или УДС - F, шт.</th><th>С учетом F, шт.</th></tr>
-                <tr><td>П1</td><td>Постоянные (без учета электромобилей) — не далее 1200 м</td><td>${Np_minus_regular}</td><td>${Math.max(0, Np_minus_regular - Math.floor(F_actual * 0.5))}</td></tr>
-                <tr><td>П2</td><td>Постоянные (электромобилей) — не далее 1200 м</td><td>${Np_minus_em}</td><td>${Np_minus_em}</td></tr>
-                <tr><td>Г1</td><td>Гостевые (без учета МГН и электромобилей) — не далее 200 м</td><td>${Ng_minus_regular}</td><td>${Math.max(0, Ng_minus_regular - Math.floor(F_actual * 0.1))}</td></tr>
-                <tr><td>Г2</td><td>Гостевые (электромобилей) — не далее 200 м</td><td>${Ng_minus_em}</td><td>${Ng_minus_em}</td></tr>
-                <tr><td>Г3</td><td>Гостевые (МГН) — не далее 100 м по СП59</td><td>${Ng_minus_mgn.total}</td><td>${Math.max(0, Ng_minus_mgn.total - Math.floor(F_actual * 0.05))}</td></tr>
-                <tr><td>В1</td><td>Приобъектные (без учета МГН и электромобилей) — не далее 200 м</td><td>${Nv_minus_regular}</td><td>${Math.max(0, Nv_minus_regular - Math.floor(F_actual * 0.15))}</td></tr>
-                <tr><td>В2</td><td>Приобъектные (электромобилей) — не далее 200 м</td><td>${Nv_minus_em}</td><td>${Nv_minus_em}</td></tr>
-                <tr><td>В3</td><td>Приобъектные (МГН) — не далее 50 м по СП59</td><td>${Nv_minus_mgn.total}</td><td>${Math.max(0, Nv_minus_mgn.total - Math.floor(F_actual * 0.05))}</td></tr>
-                <tr><td>МО</td><td>Места остановок — не далее 150 м</td><td>${this.results.No_total}</td><td>${Math.max(0, this.results.No_total - Math.floor(F_actual * 0.15))}</td></tr>
-                <tr><td colspan="2">Итого (без учета F)</td><td>${(Np_minus + Ng_minus + Nv_minus + this.results.No_total)}</td><td>${(Np_minus + Ng_minus + Nv_minus + this.results.No_total - Math.floor(F_actual * 0.5))}</td></tr>
-                <tr><td colspan="2">Требуется с учетом F=${F_actual}</td><td></td><td><strong>${this.results.N_min}</strong></td></tr>
+                <tr><th>Позиция</th><th>Описание</th><th>Количество, шт.</th></tr>
+                <tr><td>П1</td><td>Постоянные (без учёта электромобилей) - не далее 1200м</td><td>${Math.max(0, Np_minus_regular )}</td></tr>
+                <tr><td>П2</td><td>Постоянные (электромобили) - не далее 1200м</td><td>${Np_minus_em}</td></tr>
+                <tr><td>Г1</td><td>Гостевые (без учёта МГН и электромобилей) - в подземной - не далее 200м</td><td>${Math.max(0, Ng_minus_regular - (this.input.fact_uds_guest || 0))}</td></tr>
+                <tr><td>Г2</td><td>Гостевые (электромобили) - в подземной - не далее 200м</td><td>${Ng_minus_em}</td></tr>
+                <tr><td>Г3</td><td>Гостевые (МГН) - в подземной - не далее 100м по СП59</td><td>${Math.max(0, Ng_minus_mgn.total - (this.input.fact_uds_guest_mgn || 0) - (this.input.fact_zu_guest_mgn || 0))}</td></tr>
+                <tr><td>В1</td><td>Приобъектные (без учёта МГН и электромобилей) - в подземной - не далее 200м</td><td>${Math.max(0, Nv_minus_regular - (this.input.fact_uds_priob || 0))}</td></tr>
+                <tr><td>В2</td><td>Приобъектные (электромобили) - в подземной - не далее 200м</td><td>${Nv_minus_em}</td></tr>
+                <tr><td>В3</td><td>Приобъектные (МГН) - в подземной - не далее 50м по СП59</td><td>${Math.max(0, Nv_minus_mgn.total - (this.input.fact_uds_priob_mgn || 0) - (this.input.fact_zu_priob_mgn || 0))}</td></tr>
+                <tr><td>МО</td><td>Места остановок - в подземной - не далее 150м</td><td>${Math.max(0, this.results.No_total - (this.input.fact_uds_mo || 0) - (this.input.fact_zu_mo || 0))}</td></tr>
+                <tr><td><strong>Итого запроектировано</strong></td><td></td><td><strong>${this.results.N_min - F_actual}</strong></td></tr>
             </table>`;
         }
 
-        // 10. Таблица "Допустимое отклонение в большую сторону"
         if (this.results.N_max > 0 || F_actual > 0) {
             const Np_plus = (this.results.Np_plus_10 || 0);
             const Np_plus_em = Math.ceil(Np_plus * ev_share);
             const Np_plus_regular = Np_plus - Np_plus_em;
             const Ng_plus = (this.results.Ng_plus_10 || 0);
-            const Ng_plus_em = Math.ceil(Ng_plus * ev_share);
-            const Ng_plus_regular = Ng_plus - Ng_plus_em;
             const Ng_plus_mgn = this.calculateMGNPlaces(Ng_plus);
+            const Ng_plus_regular = Ng_plus - Ng_plus_mgn.total;
+            const Ng_plus_em = Math.ceil(Ng_plus_regular * ev_share);
             const Nv_plus = (this.results.Nv_plus_30 || 0);
-            const Nv_plus_em = Math.ceil(Nv_plus * ev_share);
-            const Nv_plus_regular = Nv_plus - Nv_plus_em;
             const Nv_plus_mgn = this.calculateMGNPlaces(Nv_plus);
+            const Nv_plus_regular = Nv_plus - Nv_plus_mgn.total;
+            const Nv_plus_em = Math.ceil(Nv_plus_regular * ev_share);
 
             report += `
-            <h4>10. Допустимое отклонение в большую сторону: N = (Nп+10%) + (Nг+10%) + (Nв+30%) + Nо - F</h4>
+            <h4>10. Допустимо разместить в подземной автостоянке с учётом допустимого отклонения в большую сторону: N = (Nп+10%) + (Nг+10%) + (Nв+30%) + Nо - F</h4>
             <table border="1" cellpadding="8">
-                <tr><th>Позиция</th><th>Описание</th><th>До учета фактически размещенных на участке или УДС - F, шт.</th><th>С учетом F, шт.</th></tr>
-                <tr><td>П1</td><td>Постоянные (без учета электромобилей) — не далее 1200 м</td><td>${Np_plus_regular}</td><td>${Math.max(0, Np_plus_regular - Math.floor(F_actual * 0.3))}</td></tr>
-                <tr><td>П2</td><td>Постоянные (электромобилей) — не далее 1200 м</td><td>${Np_plus_em}</td><td>${Np_plus_em}</td></tr>
-                <tr><td>Г1</td><td>Гостевые (без учета МГН и электромобилей) — не далее 200 м</td><td>${Ng_plus_regular}</td><td>${Math.max(0, Ng_plus_regular - Math.floor(F_actual * 0.1))}</td></tr>
-                <tr><td>Г2</td><td>Гостевые (электромобилей) — не далее 200 м</td><td>${Ng_plus_em}</td><td>${Ng_plus_em}</td></tr>
-                <tr><td>Г3</td><td>Гостевые (МГН) — не далее 100 м по СП59</td><td>${Ng_plus_mgn.total}</td><td>${Math.max(0, Ng_plus_mgn.total - Math.floor(F_actual * 0.05))}</td></tr>
-                <tr><td>В1</td><td>Приобъектные (без учета МГН и электромобилей) — не далее 200 м</td><td>${Nv_plus_regular}</td><td>${Math.max(0, Nv_plus_regular - Math.floor(F_actual * 0.1))}</td></tr>
-                <tr><td>В2</td><td>Приобъектные (электромобилей) — не далее 200 м</td><td>${Nv_plus_em}</td><td>${Nv_plus_em}</td></tr>
-                <tr><td>В3</td><td>Приобъектные (МГН) — не далее 50 м по СП59</td><td>${Nv_plus_mgn.total}</td><td>${Math.max(0, Nv_plus_mgn.total - Math.floor(F_actual * 0.05))}</td></tr>
-                <tr><td>МО</td><td>Места остановок — не далее 150 м</td><td>${this.results.No_total}</td><td>${Math.max(0, this.results.No_total - Math.floor(F_actual * 0.1))}</td></tr>
-                <tr><td colspan="2">Итого (без учета F)</td><td>${(Np_plus + Ng_plus + Nv_plus + this.results.No_total)}</td><td>${(Np_plus + Ng_plus + Nv_plus + this.results.No_total - Math.floor(F_actual * 0.25))}</td></tr>
-                <tr><td colspan="2">Требуется с учетом F=${F_actual}</td><td></td><td><strong>${this.results.N_max}</strong></td></tr>
-            </table>`;
-        }
-
-        // 11. Таблица "Фактически размещено на участке и УДС"
-        if (F_actual > 0) {
-            report += `
-            <h4>Фактически размещено на участке и УДС</h4>
-            <table border="1" cellpadding="8">
-                <tr><th>Категория</th><th>Обозначение</th><th>Количество, шт.</th></tr>
-                <tr><td>На территории ЗУ — места остановки</td><td>Fз(о)</td><td>${this.input.fact_zu_mo || 0}</td></tr>
-                <tr><td>На территории ЗУ — гостевые МГН</td><td>Fз(г,мгн)</td><td>${this.input.fact_zu_guest_mgn || 0}</td></tr>
-                <tr><td>На территории ЗУ — приобъектные МГН</td><td>Fз(в,мгн)</td><td>${this.input.fact_zu_priob_mgn || 0}</td></tr>
-                <tr><td>На территории УДС — места остановки</td><td>Fу(о)</td><td>${this.input.fact_uds_mo || 0}</td></tr>
-                <tr><td>На территории УДС — гостевые (без МГН)</td><td>Fу(г)</td><td>${this.input.fact_uds_guest || 0}</td></tr>
-                <tr><td>На территории УДС — гостевые МГН</td><td>Fу(г,мгн)</td><td>${this.input.fact_uds_guest_mgn || 0}</td></tr>
-                <tr><td>На территории УДС — приобъектные (без МГН)</td><td>Fу(в)</td><td>${this.input.fact_uds_priob || 0}</td></tr>
-                <tr><td>На территории УДС — приобъектные МГН</td><td>Fу(в,мгн)</td><td>${this.input.fact_uds_priob_mgn || 0}</td></tr>
-                <tr><td><strong>Всего фактически размещено (F)</strong></td><td></td><td><strong>${F_actual}</strong></td></tr>
-            </table>`;
-        }
-
-        // 12. Таблица "Расчет числа мест остановки для школы и детского сада"
-        if ((this.input.schoolCapacity && this.input.schoolCapacity > 0) || (this.input.kindergartenCapacity && this.input.kindergartenCapacity > 0)) {
-            report += `
-            <h4>Расчет числа мест остановки для школы и детского сада:</h4>
-            <table border="1" cellpadding="8">
-                <tr><th>Функциональное назначение объекта</th><th>Расчетный показатель (кол-во учащихся)</th><th>Показатель S1 (чел.)</th><th>Количество мест</th></tr>
-                ${this.input.schoolCapacity && this.input.schoolCapacity > 0 ? `<tr><td>Общеобразовательные организации</td><td>${this.input.schoolCapacity}</td><td>300</td><td>${this.results.Nk_school} (шт.)</td></tr>` : ''}
-                ${this.input.kindergartenCapacity && this.input.kindergartenCapacity > 0 ? `<tr><td>Дошкольные образовательные организации</td><td>${this.input.kindergartenCapacity}</td><td>30</td><td>${this.results.Nk_preschool} (шт.)</td></tr>` : ''}
+                <tr><th>Позиция</th><th>Описание</th><th>Количество, шт.</th></tr>
+                <tr><td>П1</td><td>Постоянные (без учёта электромобилей) - не далее 1200м</td><td>${Math.max(0, Np_plus_regular )}</td></tr>
+                <tr><td>П2</td><td>Постоянные (электромобили) - не далее 1200м</td><td>${Np_plus_em}</td></tr>
+                <tr><td>Г1</td><td>Гостевые (без учёта МГН и электромобилей) - в подземной - не далее 200м</td><td>${Math.max(0, Ng_plus_regular - (this.input.fact_uds_guest || 0))}</td></tr>
+                <tr><td>Г2</td><td>Гостевые (электромобили) - в подземной - не далее 200м</td><td>${Ng_plus_em}</td></tr>
+                <tr><td>Г3</td><td>Гостевые (МГН) - в подземной - не далее 100м по СП59</td><td>${Math.max(0, Ng_plus_mgn.total - (this.input.fact_uds_guest_mgn || 0) - (this.input.fact_zu_guest_mgn || 0))}</td></tr>
+                <tr><td>В1</td><td>Приобъектные (без учёта МГН и электромобилей) - в подземной - не далее 200м</td><td>${Math.max(0, Nv_plus_regular - (this.input.fact_uds_priob || 0))}</td></tr>
+                <tr><td>В2</td><td>Приобъектные (электромобили) - в подземной - не далее 200м</td><td>${Nv_plus_em}</td></tr>
+                <tr><td>В3</td><td>Приобъектные (МГН) - в подземной - не далее 50м по СП59</td><td>${Math.max(0, Nv_plus_mgn.total - (this.input.fact_uds_priob_mgn || 0) - (this.input.fact_zu_priob_mgn || 0))}</td></tr>
+                <tr><td>МО</td><td>Места остановок - в подземной - не далее 150м</td><td>${Math.max(0, this.results.No_total - (this.input.fact_uds_mo || 0) - (this.input.fact_zu_mo || 0))}</td></tr>
+                <tr><td><strong>Итого запроектировано</strong></td><td></td><td><strong>${this.results.N_max - F_actual}</strong></td></tr>
             </table>`;
         }
 

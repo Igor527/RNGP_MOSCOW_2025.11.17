@@ -352,6 +352,10 @@
         }
 
         function recalculate() {
+            console.log('recalculate() started');
+            console.log('ParkingCalculator available:', typeof ParkingCalculator !== 'undefined');
+            console.log('parkingData available:', typeof parkingData !== 'undefined');
+            
             const districtName = document.getElementById('districtName').value;
             const ttkStatus = document.getElementById('ttkStatus').value;
             const metroDistance = parseFloat(document.getElementById('metroDistance').value);
@@ -377,10 +381,13 @@
                 fact_uds_priob_mgn: parseInt(document.getElementById('fact_uds_priob_mgn').value)
             };
 
+            console.log('inputData:', inputData);
+
             const calculator = new ParkingCalculator(inputData);
             calculator.calculate();
             const report = calculator.getFormattedReport();
 
+            console.log('report generated, length:', report.length);
             document.getElementById('results').innerHTML = report;
             
             // Форматированный вывод исходных данных
